@@ -5,6 +5,7 @@
 # nums = [2, 1]
 
 nums = [6, 7, 0, 1, 2, 3, 4, 5]
+
 target = 2
 l, r = 0, len(nums) - 1
 while l <= r:
