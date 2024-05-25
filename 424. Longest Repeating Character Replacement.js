@@ -1,11 +1,7 @@
-/**
- * @param {string} s
- * @return {number}
- */
-const lengthOfLongestSubstring = function (s) {
+const characterReplacement = function (s){
     let left = 0;
     let right = 0;
-    const charMap = new Map();
+    const charCountMap = new Map();
     let maxLen = 0;
 
     for (; right < s.length; right++) {
@@ -18,4 +14,4 @@ const lengthOfLongestSubstring = function (s) {
     return maxLen;
 };
 
-console.log(lengthOfLongestSubstring("abcabcab")); // Output: 3
+console.log(characterReplacement("ABAB")); // Output: 3
