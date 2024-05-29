@@ -3,15 +3,15 @@ const firstNonRepeatingChar = function (str){
     const charMap = new Map();
     for (; left < str.length; left++){
         if (charMap.has(str[left])){
-            let [location, count] = charMap.get(str[left]);
-            charMap.set(str[left], [location, count + 1]);
+            let count = charMap.get(str[left]);
+            charMap.set(str[left], count + 1);
         } else {
-            charMap.set(str[left], [left, 1]);
+            charMap.set(str[left], 1);
         }
     }
 
-    for (const [key, value] of charMap.entries()) {
-        if (value[1] === 1) {
+    for (const [key, value] of charMap) {
+        if (value === 1) {
             return key;
         }
     }

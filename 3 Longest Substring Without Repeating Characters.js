@@ -18,4 +18,4 @@ const lengthOfLongestSubstring = function (s) {
     return maxLen;
 };
 
-console.log(lengthOfLongestSubstring("abcabcab")); // Output: 3
+console.log(lengthOfLongestSubstring("abcdabcab")); // Output: 3
