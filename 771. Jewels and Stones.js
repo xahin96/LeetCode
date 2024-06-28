@@ -1,8 +1,4 @@
-/**
- * @param {string} jewels
- * @param {string} stones
- * @return {number}
- */
+
 var numJewelsInStones = function(jewels, stones) {
     let stn = new Map();
     for(let i = 0 ; i < stones.length ; i++){
