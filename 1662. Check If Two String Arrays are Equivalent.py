@@ -10,4 +10,3 @@ class Solution:
         for w in word2:
             w2 += w
         return w1 == w2
-
