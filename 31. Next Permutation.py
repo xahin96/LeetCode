@@ -13,7 +13,6 @@ class Solution:
             nums.reverse()
             return nums
 
-        i_great = -1
         for i in reversed(range(len(nums))):
             if nums[i] > nums[cutoff]:
                 nums[cutoff], nums[i] = nums[i], nums[cutoff]
