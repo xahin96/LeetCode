@@ -26,3 +26,29 @@ public class Solution
         return 0;
     }
 }
+
+public class Solution
+{
+    public int MajorityElement(int[] nums)
+    {
+        int counter = 0;
+        int major = nums[0];
+        foreach(int n in nums)
+        {
+            if(counter == 0)
+            {
+                counter++;
+                major = n;
+            }
+            else if (counter > 0 && major == n)
+            {
+                counter++;
+            }
+            else if (counter > 0 && major != n)
+            {
+                counter--;
+            }
+        }
+        return major;
+    }
+}
