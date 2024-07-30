@@ -13,6 +13,7 @@ const lengthOfLongestSubstring = function (s) {
             left = Math.max(charMap.get(s[right]) + 1, left);
         }
         charMap.set(s[right], right);
+        console.log(charMap, left, right);
         maxLen = Math.max(maxLen, (right - left) + 1);
     }
     return maxLen;
