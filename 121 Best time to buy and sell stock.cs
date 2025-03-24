@@ -27,3 +27,25 @@ public class Solution {
         return maxProfit;
     }
 }
+
+public class Solution {
+    public int MaxProfit(int[] prices) {
+        int maxProfit = 0;
+        int l = 0;
+        int r = 1;
+        while (r < prices.Length)
+        {
+            int currDiff = prices[r] - prices[l];
+            if (currDiff > maxProfit)
+            {
+                maxProfit = currDiff;
+            }
+            else if (prices[r] < prices[l])
+            {
+                l=r;
+            }
+            r++;
+        }
+        return maxProfit;
+    }
+}
